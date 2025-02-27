@@ -2,7 +2,7 @@ import { ClassroomButtonCrudActionDTO } from "@/types/classroom.type";
 import { Classroom } from "@prisma/client";
 import axios from "axios";
 
-const END_POINT = `${process.env.NEXT_PUBLIC_API_URL}/classrooms`;
+const END_POINT = `https://app-next-one.vercel.app/api/classrooms`;
 
 async function create(
   credentials: ClassroomButtonCrudActionDTO

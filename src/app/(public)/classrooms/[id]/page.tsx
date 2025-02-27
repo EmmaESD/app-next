@@ -12,7 +12,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { id } = await params;
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/classrooms/${id}`
+    `https://app-next-one.vercel.app/api/classrooms/${id}`
   );
   const classroom = await res.json();
 
@@ -25,7 +25,7 @@ const ClassroomPage = async ({ params }: ClassrommPageProps) => {
   const { id } = await params;
 
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/classrooms/${id}`
+    `https://app-next-one.vercel.app/api/classrooms/${id}`
   );
   const classroom = await res.json();
 
